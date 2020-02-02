@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black|Noto+Serif&display=swap" rel="stylesheet">
+
+
+<style>
+
+body {
+    text-align: center;
+    font-family: 'Noto Serif', serif;
+}
+form {
+    display: inline-block;
+    font-family: 'Noto Serif', serif;
+}
+
+e_message{
+    display: inline-block;
+    font-family: 'Archivo Black', sans-serif;
+}
+
+</style>
+</head>
+
+<h1 style = "text-align: center"> Welcome to Rates!</h1>
+
+
+<body style = background-color:#85bb65>
+
+
+<form method="get" action="{% url 'home' %}"> <!-- build url to direct to '/rates'-->
+Enter a currency symbol: <input name="symbol" type="text"><br> <!--"symbol is the variable assigned to the value inputted-->
+<p><input type="submit" value = "Look up"> </p>
+
+<p>
+
+<e_message>
+
+    {% if error %}
+<e_message>
+    "Sorry, {{ symbol }} is not a valid currency"
+</e_message>
+
+        <p>
+<img src = "https://mediadc.brightspotcdn.com/dims4/default/caf5f21/2147483647/strip/true/crop/3000x1978+0+0/resize/3000x1978!/quality/90/?url=https%3A%2F%2Fmediadc.brightspotcdn.com%2F45%2F3f%2F616aaaad499598283cab4536a888%2Fbrunerchristies.jpg" class = "center-block" width = 325 height = 250>
+
+
+        </p>
+{% endif %}
+
+</p>
+
+
+</body>
+</html>
